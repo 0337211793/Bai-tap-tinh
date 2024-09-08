@@ -1,1 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.web>
+        <!-- Cấu hình bảo mật và xử lý lỗi -->
+        <compilation debug="true" targetFramework="4.8" />
+        <authentication mode="None" />
+        <customErrors mode="Off" />
+    </system.web>
+
+    <connectionStrings>
+        <!-- Cấu hình chuỗi kết nối cơ sở dữ liệu -->
+        <add name="MyDatabase" connectionString="Data Source=serverName;Initial Catalog=databaseName;User ID=username;Password=password" providerName="System.Data.SqlClient" />
+    </connectionStrings>
+
+    <system.webServer>
+        <!-- Cấu hình cho IIS -->
+        <modules runAllManagedModulesForAllRequests="true" />
+        <handlers>
+            <remove name="WebServiceHandler" />
+            <remove name="ScriptHandlerFactory" />
+            <add name="WebServiceHandler" path="*.asmx" verb="*" type="System.Web.Services.WebServiceHandlerFactory, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode" />
+            <add name="ScriptHandlerFactory" path="*.js" verb="*" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode" />
+        </handlers>
+    </system.webServer>
+
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+    </startup>
+</configuration>
 
