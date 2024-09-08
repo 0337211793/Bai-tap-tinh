@@ -1,1 +1,23 @@
 
+using System;
+using lib_tinh_toan;
+
+class Program
+{
+    static void Main()
+    {
+        double a = 1; // Thay đổi hệ số theo yêu cầu
+        double b = -6;
+        double c = 11;
+        double d = -6;
+
+        double[] roots = CubicEquationSolver.Solve(a, b, c, d);
+
+        Console.WriteLine("Nghiệm của phương trình bậc 3 là:");
+        foreach (var root in roots)
+        {
+            Console.WriteLine(root);
+        }
+    }
+}
+
