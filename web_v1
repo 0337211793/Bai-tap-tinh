@@ -1,1 +1,19 @@
+<!-- Tệp: Default.aspx -->
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="web_v1.Default" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giải Phương Trình Bậc 3</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:TextBox ID="aTextBox" runat="server" />
+        <asp:TextBox ID="bTextBox" runat="server" />
+        <asp:TextBox ID="cTextBox" runat="server" />
+        <asp:TextBox ID="dTextBox" runat="server" />
+        <asp:Button ID="solveButton" runat="server" Text="Giải" OnClick="solveButton_Click" />
+        <asp:Label ID="resultsLabel" runat="server" />
+    </form>
+</body>
+</html>
 
